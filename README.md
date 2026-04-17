@@ -196,7 +196,7 @@ Rezervă acum
 <h2>Recenzii</h2>
 
 <div class="testimonial">
-<p>„Un loc incredibil! Mă simt mult mai relaxat.”</p>
+<p>„Un loc incredibil! Mă simt mult mai relaxata.”</p>
 <b>— Ana</b>
 </div>
 

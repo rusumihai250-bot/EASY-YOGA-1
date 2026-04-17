@@ -1,4 +1,4 @@
-
+<!DOCTYPE html>
 <html lang="ro">
 <head>
 <meta charset="UTF-8">
@@ -9,132 +9,150 @@
 
 <style>
 body {
-    margin:0;
-    font-family:Poppins;
-    background:#f4f7f4;
-    color:#333;
+    margin: 0;
+    font-family: Poppins;
+    background: #f5f7f5;
+    color: #2b2b2b;
 }
 
 /* NAV */
 nav {
-    position:fixed;
-    width:100%;
-    background:#2e7d32;
-    padding:15px;
-    text-align:center;
-    z-index:1000;
+    position: fixed;
+    width: 100%;
+    background: rgba(30, 100, 50, 0.95);
+    padding: 12px;
+    text-align: center;
+    z-index: 1000;
+    backdrop-filter: blur(8px);
 }
+
 nav a {
-    color:white;
-    margin:15px;
-    text-decoration:none;
-    font-weight:500;
+    color: white;
+    margin: 12px;
+    text-decoration: none;
+    font-weight: 500;
 }
 
-/* HEADER */
-header {
-    height:100vh;
-    background:linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
-    url('https://images.unsplash.com/photo-1506126613408-eca07ce68773') center/cover;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    color:white;
+/* HERO */
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+    url('https://images.unsplash.com/photo-1545389336-cf090694435e') center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 20px;
 }
 
-header h1 {
-    font-size:60px;
+.hero h1 {
+    font-size: 60px;
+    margin: 0;
 }
 
-header p {
-    font-size:22px;
+.hero p {
+    font-size: 20px;
+    margin-top: 10px;
 }
 
-/* BUTTON */
 .btn {
-    padding:15px 30px;
-    background:#2e7d32;
-    color:white;
-    border:none;
-    border-radius:30px;
-    cursor:pointer;
-    transition:0.3s;
-}
-.btn:hover {
-    background:#1b5e20;
-    transform:scale(1.05);
+    margin-top: 20px;
+    padding: 14px 28px;
+    border: none;
+    border-radius: 30px;
+    background: #2e7d32;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
 }
 
-/* SECTION */
+.btn:hover {
+    transform: scale(1.05);
+    background: #1b5e20;
+}
+
+/* SECTIONS */
 section {
-    padding:80px 20px;
-    text-align:center;
+    padding: 80px 20px;
+    text-align: center;
 }
 
 /* CARDS */
 .cards {
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
-    gap:20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 .card {
-    background:white;
-    padding:25px;
-    width:280px;
-    border-radius:20px;
-    box-shadow:0 10px 25px rgba(0,0,0,0.1);
-    transition:0.3s;
+    background: white;
+    width: 260px;
+    padding: 25px;
+    border-radius: 18px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    transition: 0.3s;
 }
+
 .card:hover {
-    transform:translateY(-10px);
+    transform: translateY(-10px);
 }
 
 /* GALLERY */
 .gallery {
-    display:flex;
-    flex-wrap:wrap;
-    gap:10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 10px;
+    max-width: 900px;
+    margin: auto;
 }
+
 .gallery img {
-    width:32%;
-    border-radius:15px;
+    width: 100%;
+    border-radius: 12px;
 }
 
-/* TESTIMONIALS */
-.testimonial {
-    max-width:600px;
-    margin:20px auto;
-    background:white;
-    padding:20px;
-    border-radius:15px;
-    box-shadow:0 5px 15px rgba(0,0,0,0.1);
-}
-
-/* WHATSAPP FLOAT */
-.whatsapp {
-    position:fixed;
-    bottom:20px;
-    right:20px;
-    background:#25D366;
-    color:white;
-    padding:15px;
-    border-radius:50%;
-    font-size:20px;
-    text-decoration:none;
+/* REVIEWS */
+.review {
+    max-width: 600px;
+    margin: 15px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
 }
 
 /* CONTACT */
 .contact {
-    background:#e8f5e9;
+    background: #e8f5e9;
+}
+
+/* FLOAT WHATSAPP */
+.whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25D366;
+    color: white;
+    padding: 15px;
+    border-radius: 50%;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+/* FOOTER */
+footer {
+    background: #2e7d32;
+    color: white;
+    text-align: center;
+    padding: 20px;
 }
 
 /* MOBILE */
 @media(max-width:768px){
-    header h1 {font-size:40px;}
-    .gallery img {width:100%;}
+    .hero h1 {font-size: 38px;}
 }
 </style>
 </head>
@@ -142,84 +160,85 @@ section {
 <body>
 
 <nav>
-<a href="#">Acasă</a>
+<a href="#home">Acasă</a>
 <a href="#about">Despre</a>
-<a href="#services">Servicii</a>
+<a href="#services">Clase</a>
 <a href="#gallery">Galerie</a>
 <a href="#reviews">Recenzii</a>
 <a href="#contact">Contact</a>
 </nav>
 
-<header>
-<div>
-<h1>EASY YOGA</h1>
-<p>Relaxare • Energie • Echilibru</p>
-<button class="btn" onclick="window.location.href='https://wa.me/37369404887'">
-Rezervă acum
-</button>
+<div class="hero" id="home">
+    <div>
+        <h1>EASY YOGA</h1>
+        <p>Echilibru • Energie • Liniște interioară</p>
+        <button class="btn" onclick="window.location.href='https://wa.me/37369404887'">
+            Rezervă o clasă
+        </button>
+    </div>
 </div>
-</header>
 
 <section id="about">
-<h2>Despre noi</h2>
-<p>Easy Yoga este spațiul tău pentru liniște, energie și echilibru interior.</p>
+    <h2>Despre noi</h2>
+    <p>Easy Yoga este un spațiu dedicat relaxării, sănătății și echilibrului interior prin mișcare și respirație.</p>
 </section>
 
 <section id="services">
-<h2>Serviciile noastre</h2>
-<div class="cards">
-<div class="card">
-<h3>Yoga</h3>
-<p>Clase pentru toate nivelurile</p>
-</div>
-<div class="card">
-<h3>Meditație</h3>
-<p>Reducerea stresului</p>
-</div>
-<div class="card">
-<h3>Stretching</h3>
-<p>Flexibilitate și sănătate</p>
-</div>
-</div>
+    <h2>Clasele noastre</h2>
+    <div class="cards">
+        <div class="card">
+            <h3>Yoga</h3>
+            <p>Clase pentru toate nivelurile</p>
+        </div>
+
+        <div class="card">
+            <h3>Meditație</h3>
+            <p>Calm mental și reducerea stresului</p>
+        </div>
+
+        <div class="card">
+            <h3>Stretching</h3>
+            <p>Flexibilitate și relaxare corporală</p>
+        </div>
+    </div>
 </section>
 
 <section id="gallery">
-<h2>Galerie</h2>
-<div class="gallery">
-<img src="https://images.unsplash.com/photo-1552196563-55cd4e45efb3">
-<img src="https://images.unsplash.com/photo-1518611012118-fddc5c9c6a3b">
-<img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773">
-</div>
+    <h2>Galerie</h2>
+    <div class="gallery">
+        <img src="https://images.unsplash.com/photo-1552196563-55cd4e45efb3">
+        <img src="https://images.unsplash.com/photo-1518611012118-fddc5c9c6a3b">
+        <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773">
+    </div>
 </section>
 
 <section id="reviews">
-<h2>Recenzii</h2>
+    <h2>Recenzii</h2>
 
-<div class="testimonial">
-<p>„Un loc incredibil! Mă simt mult mai relaxata.”</p>
-<b>— Ana</b>
-</div>
+    <div class="review">
+        „Un loc perfect pentru relaxare și energie pozitivă.”
+        <br><b>- Ana</b>
+    </div>
 
-<div class="testimonial">
-<p>„Atmosferă foarte plăcută și instructori buni.”</p>
-<b>— Mihai</b>
-</div>
-
+    <div class="review">
+        „Foarte profesionist și atmosferă calmă.”
+        <br><b>- Mihai</b>
+    </div>
 </section>
 
-<section class="contact" id="contact">
-<h2>Contact</h2>
-<p>📍 Chișinău</p>
-<p>📞 +37369404887</p>
-<p>Instagram: easy_yoga33</p>
+<section id="contact" class="contact">
+    <h2>Contact</h2>
+    <p>📍 Chișinău</p>
+    <p>📞 +37369404887</p>
+    <p>Instagram: easy_yoga33</p>
 
-<button class="btn" onclick="window.location.href='https://wa.me/37369404887'">
-Scrie pe WhatsApp
-</button>
+    <button class="btn" onclick="window.location.href='https://wa.me/37369404887'">
+        Scrie pe WhatsApp
+    </button>
 </section>
 
-<footer style="background:#2e7d32;color:white;padding:20px;text-align:center;">
-© EASY YOGA
+<footer>
+    © EASY YOGA — Toate drepturile rezervate
 </footer>
 
 <a class="whatsapp" href="https://wa.me/37369404887">💬</a>
